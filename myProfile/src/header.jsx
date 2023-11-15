@@ -6,5 +6,5 @@
         <a  href="#Work">Work</a>
         <a  href="#AboutMe">About Me</a>
     </nav>
-    <img src="./Assets/images/my_profile.jpg" alt="Picture of Lisa Eimicke" class="image">
+    <img src="./Assets/images/my_profile.jpg" alt="Picture of Lisa Eimicke" class="image" />
 </header>
