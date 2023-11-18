@@ -1,3 +1,44 @@
+
+
+
+function Projects() {
+    // Replace links with deployed projects and GitHub repos
+    const [projects] = useState([
+        {
+            name: 'surfReport',
+            description: 'MERN Stack',
+            link: "https://github.com",
+            repo: "https://github.com"
+        },]);
+    return (
+        <div>
+            <div className="flex-row">
+                {projects.map((project, idx) => (
+                    <ProjectCard
+                        project={project}
+                        key={"project" + idx}
+                    />
+                ))}
+            </div>
+        </div>
+    );
+};
+export default Projects;
+
+// __________________________________________________________________________
+
+
+
+
+
+
+
+
+
+
+
+
+
 <>
     <h2>Work</h2>
     <section id="Work" class="card-container">
@@ -91,4 +132,5 @@
             </figure>
         </div>
     </section>
+
 </>
