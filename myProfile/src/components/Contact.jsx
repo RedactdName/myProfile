@@ -1,3 +1,5 @@
+function Contact (){
+    return (
 <section id="ContactMe">
         <h2>Contact Me</h2>
         <nav class="call">
@@ -7,3 +9,5 @@
 
         </nav>
     </section>
+)}
+export default Contact;

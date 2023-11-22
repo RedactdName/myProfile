@@ -1,8 +1,12 @@
-// import { useState } from 'react'
-// import './App.css'
+import { useState } from 'react'
+import './App.css'
 import About from './components/About';
 import Projects from './components/projects';
-// import { Link } from 'react-router-dom';
+import ProjectCard from './components/ProjectCard';
+import { Link } from 'react-router-dom';
+import Head from './components/header';
+import Navbar from './components/navbar';
+import Contact from './components/contact';
 
 function App() {
  
@@ -11,8 +15,12 @@ function App() {
 
   return (
     <>
+    < Head />
+    < Navbar />
     < About/>
-    < Project/>
+    < Projects/>
+    < ProjectCard />
+    < Contact />
      
     </>
   )

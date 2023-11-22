@@ -1,3 +1,5 @@
+function Head(){
+    return (
 <header>
     <h1 class="hero-text">I am Lisa Eimicke</h1>
 
@@ -6,5 +8,7 @@
         <a  href="#Work">Work</a>
         <a  href="#AboutMe">About Me</a>
     </nav>
-    <img src="./Assets/images/my_profile.jpg" alt="Picture of Lisa Eimicke" class="image" />
+    <img src="./assets/images/my_profile.jpg" alt="Picture of Lisa Eimicke" class="image" />
 </header>
+)}
+export default Head;
