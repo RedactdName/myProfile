@@ -1,15 +1,33 @@
-
+import { useState } from "react";
+import ProjectCard from "./ProjectCard";
 
 
 function Projects() {
     // Replace links with deployed projects and GitHub repos
     const [projects] = useState([
         {
-            name: 'surfReport',
-            description: 'MERN Stack',
-            link: "https://github.com",
-            repo: "https://github.com"
-        },]);
+            name: 'socialNetworkAPI',
+            image: '../assets/images/slides.jpg',
+            description: 'API for social network',
+            link: "not deployed",
+            repo: "https://github.com/RedactdName/socialNetworkAPI.git"
+        },
+        {
+            name: 'RainOnYourParade',
+            image: '../assets/images/RainOnYourParade.png',
+            description: 'find local events and current forcast for the area those events are happening in',
+            link: "not deployed",
+            repo: "https://github.com/RedactdName/RainOnYourParade.git"
+        },
+        {
+            name: 'FureverHomed',
+            image: '../assets/images/RainOnYourParade.png',
+            description: 'app to search for currently avaialable perts using petfinder API, save them to your profile',
+            link: "https://fureverhomed-ce9f92bca93e.herokuapp.com/",
+            repo: "https://github.com/ccoff1798/FureverHomed.git"
+        },
+        
+    ]);
     return (
         <div>
             <div className="flex-row">

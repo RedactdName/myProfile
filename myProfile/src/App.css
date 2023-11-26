@@ -1,42 +1,142 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* Primary body and background for the website */
+body, html {
+  margin: 10;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: aliceblue;
+  color: midnightblue
+}
+
+.navigation {
+  background-color: #f6c6c6;
+  overflow: hidden;
+}
+/* The links withing the nav bar at the top */
+.navigation a {
+  float: right;
+  color: #453e3e;
   text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+/* creates hover effect of nav bar when over sepcifc section */
+.navigation a:hover {
+  background-color: #a68e8e;
+  color: black;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+
+h1 {
+  font-size: 300%;
+  text-align: center;
+  /* color: aliceblue; */
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Profile image of myself on page */
+.image {
+  height: 20%;
+  width: 20%;
+  border-radius: 25%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+h2 {
+  font-size: 150%;
+  text-align: left;
+  font-family: cursive;
+  font-weight: bold;
+  padding-bottom: 1%;
+  padding-top: 1%;
+
+}
+
+h3 {
+  font-size: 100%;
+  font-weight: bold;
+  padding-bottom: 1%;
+  padding-top: 1%;
+}
+p   {
+  font-size: 85%;
+  
+}
+/* flexbox for the primary project displayed on the website */
+.card-container {
+  display: flex;
+  height: fit-content;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+#main-card {
+  text-align: center;
+  padding-bottom: 10px;
+  width: 100%;
+}
+/* image of main card */
+.img-kauai {
+  width: 80%;
+}
+/* visual details on remaining cards to display */
+.smaller-images-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) !important;
+  grid-template-rows: repeat(2, 1fr) !important;
+  gap: 10px;
+  width: 80%;
+  padding: 2%;
+}
+
+.smaller-images-container img {
+  width: 100%;
+  
+}
+/* media query to keep primary image unchanged by different screen sizes */
+@media screen and (max-width: 900px) {
+  .image {
+      width: 150px;
   }
-  to {
-    transform: rotate(360deg);
+}
+/* media query to adjust the text size when screen in tablet sized or smaller giving more visual appeal for the smaller screen */
+@media screen and (max-width: 768px) {
+  .about-me-info {
+      font-size: 10px;
   }
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+/* adjusts heading size once screen viewing it is smaller than 400px */
+@media screen and (max-width: 400px) {
+  .hero-text {
+      font-size: 20px;
   }
 }
-
-.card {
-  padding: 2em;
+/* starts the contact me nav bar details to match top nav for continuity */
+.call {
+  background-color: #f6c6c6;
+  overflow: hidden;
 }
 
-.read-the-docs {
-  color: #888;
+.call a {
+  float: left;
+  color: #453e3e;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+
+}
+
+.call a:hover {
+  background-color: #a68e8e;
+  color: black;
+
+}
+footer h2 {
+  text-align: center;
+  padding-top: 1%;
+  font-size: 100%;
+
 }
