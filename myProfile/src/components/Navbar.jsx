@@ -1,26 +1,33 @@
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
 
 
-function Navbar({ currentPage }) {
-    const pages = ['projects', 'contact']
-    return (
-        <nav className="navigation">
-            {/* <a href="#ContactMe">Contact Me</a>
-            <a href="#Work">Work</a>
-            <a href="#AboutMe">About Me</a> */}
-            <ul>
+
+function Navbar(props) {
+    const {
+        pages = [],
+        setCurrentPage,
+        currentPage,
+      } = props;
+      useEffect(() => {
+        document.title = currentPage.name;
+      }, [currentPage]);
+      return (
+          <nav className='navigation'>
+            <ul className="flex-row">
+              {pages.map((Page) => (
                 <li
-                    className={currentPage === '/' && 'navActive'} key='about'
+                  className={`mx-5 ${
+                    currentPage.name === Page.name && 'navActive'
+                    }`}
+                  key={Page.name}
                 >
-                    <Link to='/'>About</Link>
+                  <span
+                    onClick={() => setCurrentPage(Page)}
+                  >
+                    {Page.name}
+                  </span>
                 </li>
-                {pages.map((Page) => (
-                    <li
-                        className={currentPage === `/${Page}` && 'navActive'} key={Page}
-                    >
-                        <Link to={`/${Page}`}>{Page}</Link>
-                    </li>
-                ))}
+              ))}
             </ul>
 
         </nav>

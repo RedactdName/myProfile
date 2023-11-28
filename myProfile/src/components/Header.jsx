@@ -1,28 +1,20 @@
-// function Head(){
-//     return (
-// <header>
-//     <h1 className="hero-text">I am Lisa Eimicke</h1>
+import React from "react";
+import ProfileImage from "../../public/assets/images/my_profile.jpg";
 
-//     <nav className="navigation">
-//         <a  href="#ContactMe">Contact Me</a>
-//         <a  href="#Work">Work</a>
-//         <a  href="#AboutMe">About Me</a>
-//     </nav>
-//     <img src="../assets/images/my_profile.jpg" alt="Picture of Lisa Eimicke" className="image" />
-// </header>
-// )}
-// export default Head;
-
-import ProfileImage from '../assets/images/my_profile.jpg'
-
-function Head(props) {
+function Header(props) {
     return (
-        <header>
+        <header className='flex-row space-between px-1'>
             <h1 className="hero-text">I am Lisa Eimicke</h1>
-            <img src={ProfileImage} alt="Picture of Lisa Eimicke" className="image" />
             {props.children}
+            <img 
+          src={ProfileImage}
+          className="profileImage"
+          alt="Picture of Lisa Eimicke"
+         
+        />
+            
         </header>
     )
 }
 
-export default Head;
+export default Header;

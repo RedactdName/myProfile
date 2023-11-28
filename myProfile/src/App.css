@@ -1,26 +1,32 @@
 /* Primary body and background for the website */
-body, html {
+body,
+html {
   margin: 10;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: aliceblue;
-  color: midnightblue
+  color: midnightblue;
+  padding: 10px;
 }
 
 .navigation {
   background-color: #f6c6c6;
   overflow: hidden;
 }
+
 /* The links withing the nav bar at the top */
-.navigation a {
+.navigation ul li {
   float: right;
   color: #453e3e;
   text-align: center;
   padding: 14px 16px;
-  text-decoration: none;
+  list-style: none;
   font-size: 17px;
+  margin-right: 2%;
+
 }
+
 /* creates hover effect of nav bar when over sepcifc section */
-.navigation a:hover {
+.navigation ul li:hover {
   background-color: #a68e8e;
   color: black;
 }
@@ -31,17 +37,22 @@ h1 {
   text-align: center;
   /* color: aliceblue; */
 }
+
 /* Profile image of myself on page */
-.image {
+.profileImage {
   height: 20%;
   width: 20%;
+  /* min-height: 10%;
+  max-height: 10%; */
   border-radius: 25%;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 1%;
-  padding-bottom: 1%;
-  
+  margin: 0 auto;
+  padding: 1% 0;
+  /* margin-left: auto;
+  margin-right: auto; */
+  /* padding-top: 1%;
+  padding-bottom: 1%; */
+
 }
 
 h2 {
@@ -60,10 +71,12 @@ h3 {
   padding-bottom: 1%;
   padding-top: 1%;
 }
-p   {
+
+p {
   font-size: 85%;
-  
+
 }
+
 /* flexbox for the primary project displayed on the website */
 .card-container {
   display: flex;
@@ -72,15 +85,22 @@ p   {
   justify-content: center;
 }
 
-#main-card {
+.About {
   text-align: center;
+  padding: 10px;
   padding-bottom: 10px;
+  padding-right: 10px;
   width: 100%;
+}
+.project-img {
+  min-height: 200px;
+  max-height: 200px;
 }
 /* image of main card */
 .img-kauai {
   width: 80%;
 }
+
 /* visual details on remaining cards to display */
 .smaller-images-container {
   display: grid;
@@ -93,26 +113,9 @@ p   {
 
 .smaller-images-container img {
   width: 100%;
-  
+
 }
-/* media query to keep primary image unchanged by different screen sizes */
-@media screen and (max-width: 900px) {
-  .image {
-      width: 150px;
-  }
-}
-/* media query to adjust the text size when screen in tablet sized or smaller giving more visual appeal for the smaller screen */
-@media screen and (max-width: 768px) {
-  .about-me-info {
-      font-size: 10px;
-  }
-}
-/* adjusts heading size once screen viewing it is smaller than 400px */
-@media screen and (max-width: 400px) {
-  .hero-text {
-      font-size: 20px;
-  }
-}
+
 /* starts the contact me nav bar details to match top nav for continuity */
 .call {
   background-color: #f6c6c6;
@@ -134,9 +137,31 @@ p   {
   color: black;
 
 }
+
 footer h2 {
   text-align: center;
   padding-top: 1%;
   font-size: 100%;
 
+}
+
+/* media query to keep primary image unchanged by different screen sizes */
+@media screen and (max-width: 900px) {
+  .image {
+    width: 150px;
+  }
+}
+
+/* media query to adjust the text size when screen in tablet sized or smaller giving more visual appeal for the smaller screen */
+@media screen and (max-width: 768px) {
+  .about-me-info {
+    font-size: 10px;
+  }
+}
+
+/* adjusts heading size once screen viewing it is smaller than 400px */
+@media screen and (max-width: 400px) {
+  .hero-text {
+    font-size: 20px;
+  }
 }

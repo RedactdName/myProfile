@@ -1,60 +1,41 @@
+import React, {useState } from 'react';
+import Header from "./components/Header";
+import Navbar from "./components/navbar";
+import Page from "./components/Page";
 
-import { useState } from 'react'
-import './App.css'
-import About from './components/About';
-import Projects from './components/projects';
-import ProjectCard from './components/ProjectCard';
-import { Link } from 'react-router-dom';
-import Head from './components/header';
-// import Navbar from './components/navbar';
-import Contact from './components/contact';
-import Navbar from './components/navbar';
-// import NavTabs from './components/Navtabs';
+
+
 
 function App() {
-
   const [pages] = useState([
     {
-      name: 'about'
+      name: "About Me"
     },
-    {
-      name: 'projects'
-    },
-    {
-      name: 'contact'
-    }
+    { name: "Portfolio" },
+    {name: "Resume"},
+    { name: "Contact Me" }
   ]);
 
-  const [currentPage, setCurrentPage] = useState(pages[0])
+  const [currentPage, setCurrentPage] = useState(pages[0]);
 
   return (
-    <>
-      < Head >
-        <Navbar currentPage={currentPage} />
-      </Head>
+    <div>
+      <Header>
+        <Navbar
+          pages={pages}  cu
+          setCurrentPage={setCurrentPage}
+          currentPage={currentPage}
+        ></Navbar>
+      </Header>
       <main>
-        <Page currentPage={currentPage} />
+        <Page currentPage={currentPage}></Page>
       </main>
-{/* 
-      < About />
-      < Projects />
-      < ProjectCard />
-      < Contact /> */}
-
-    </>
-  )
+    
+    </div>
+  );
 }
 
-export default App
-// import { Outlet } from 'react-router-dom';
-// import Nav from './components/Navtabs';
-// function App() {
-//   return (
-//     <>
-//       <Nav />
-//       <main className="mx-3">
-//         <Outlet />
-//       </main>
-//     </>
-//   );
-// }
+
+
+
+export default App;
