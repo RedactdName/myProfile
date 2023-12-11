@@ -9,11 +9,11 @@ import Page from "./components/Page";
 function App() {
   const [pages] = useState([
     {
-      name: "About Me"
+      name: "About"
     },
     { name: "Portfolio" },
-    {name: "Resume"},
-    { name: "Contact Me" }
+    { name: "Resume"},
+    { name: "Contact" }
   ]);
 
   const [currentPage, setCurrentPage] = useState(pages[0]);
