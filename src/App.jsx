@@ -1,7 +1,7 @@
 import React, {useState } from 'react';
-import Header from "./components/Header";
-import Navbar from "./components/navbar";
-import Page from "./components/Page";
+import Header from "../components/Header.jsx";
+import Navbar from "../components/Navbar.jsx";
+import Page from "../components/Page.jsx";
 
 
 
