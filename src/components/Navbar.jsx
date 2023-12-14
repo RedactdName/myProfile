@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react';
 
-
-
 function Navbar(props) {
     const {
         pages = [],
