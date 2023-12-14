@@ -1,6 +1,10 @@
 import { useState } from "react";
 // import Project from "./Project";
-// import image from '../../public/assets/images/tinyskateshop.jpg'
+import rainOnYourParade from '../assets/images/RainOnYourParade.jpg'
+import fureverHomed from '../assets/images/FureverHomed.jpg'
+import tinyskateshop from '../assets/images/tinyskateshop.jpg'
+import socialNetworkAPI from '../assets/images/slides.jpg'
+import passwordGenerator from '../assets/images/password-generator.jpg'
 // import image from (`../../public/assets/images/${name.jpg})  
 
 function Portfolio() {
@@ -8,35 +12,35 @@ function Portfolio() {
     const [projects] = useState([
         {
             name: 'RainOnYourParade',
-            image: '../../publc/assets/images/RainOnYourParade.jpg',
+            image: rainOnYourParade,
             description: 'find local events and current forcast for the area those events are happening in',
             link: "not deployed",
             repo: "https://github.com/RedactdName/RainOnYourParade.git"
         },
         {
-            name: 'FureverHomed',
-            image: '../../public/assets/images/FureverHomed.jpg',
+            name: 'FureverHomed', 
+            image: fureverHomed,
             description: 'app to search for currently avaialable perts using petfinder API, save them to your profile',
             link: "https://fureverhomed-ce9f92bca93e.herokuapp.com/",
             repo: "https://github.com/ccoff1798/FureverHomed.git"
         },
         {
             name: 'tinyskateshop',
-            image: '../../public/assets/images/tinyskateshop.jpg',
+            image: tinyskateshop,
             description: 'ecommerce website for fingerboard business',
             link: "https://tinyskateshop.com/",
             repo: "https://github.com/ccoff1798/tinyskateshop.git"
         },
         {
             name: 'socialNetworkAPI',
-            image: '../../public/assets/images/slides.jpg',
+            image: socialNetworkAPI,
             description: 'API for social network',
             link: "not deployed",
             repo: "https://github.com/RedactdName/socialNetworkAPI.git"
         },
         {
             name: 'password-generator',
-            image: '../../public/assets/images/slides.jpg',
+            image: passwordGenerator,
             description: 'app to create unique passwords based on needed criteria',
             link: "not deployed",
             repo: "https://github.com/RedactdName/password-generator.git"

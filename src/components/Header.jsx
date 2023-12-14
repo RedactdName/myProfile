@@ -1,5 +1,5 @@
 import React from "react";
-import ProfileImage from "../../public/assets/images/my_profile.jpg";
+import ProfileImage from "../assets/images/my_profile.jpg";
 
 function Header(props) {
     return (
